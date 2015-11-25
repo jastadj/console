@@ -31,6 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="console.cpp" />
+		<Unit filename="console.hpp" />
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
