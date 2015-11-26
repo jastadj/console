@@ -1,12 +1,13 @@
 #include <cstdlib>
 
-#include "console.hpp"
+#include "myapp.hpp"
 
 int main(int argc, char *argv[])
 {
-    Console console;
 
-    console.startConsole();
+    MyApp testapp;
+
+    testapp.start();
 
     return 0;
 }

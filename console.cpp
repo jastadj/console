@@ -1,11 +1,10 @@
 #include "console.hpp"
-#include <vector>
+
 
 Console::Console()
 {
     //set default parameters
     mPrompt = ">";
-    mQuitConsole = false;
 }
 
 Console::~Console()
@@ -13,7 +12,7 @@ Console::~Console()
 
 }
 
-void Console::parse(std::string buf, char delim)
+std::vector<std::string> Console::parse(std::string buf, char delim)
 {
     //strip string out separated by delimiter and store in vector
     std::vector< std::string> words;
@@ -36,23 +35,21 @@ void Console::parse(std::string buf, char delim)
         buf.erase(0, pos+1);
     }
 
+    return words;
+
 }
 
-void Console::startConsole()
+std::vector<std::string> Console::getConsoleInput()
 {
 
-    while(!mQuitConsole)
-    {
-        //input buffer
-        std::string buf;
+    //input buffer
+    std::string buf;
 
-        std::cout << mPrompt;
+    std::cout << mPrompt;
 
-        //get user input
-        std::getline(std::cin, buf);
+    //get user input
+    std::getline(std::cin, buf);
 
-        //parse input
-        parse(buf);
-    }
-
+    //parse input
+    return parse(buf);
 }
