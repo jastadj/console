@@ -39,6 +39,9 @@ std::vector<std::string> Console::parse(std::string buf, char delim)
 
 }
 
+//this function is to get console data using standard c++ lib
+//if you don't want to use the cpp lib, just feed the input string from
+//some other api/lib into the parse to get all the words in the string
 std::vector<std::string> Console::getConsoleInput()
 {
 

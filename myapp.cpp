@@ -14,6 +14,9 @@ void MyApp::start()
 {
     bool quit = false;
 
+
+    //heres an example of how to use the console class to get and parse console data
+
     while(!quit)
     {
         std::vector<std::string> userinput = myconsole.getConsoleInput();
